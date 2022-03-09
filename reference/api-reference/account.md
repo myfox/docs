@@ -1,30 +1,18 @@
-# Pets
+# Account
 
-## Creating a new pet
+## Add a contact informartion
 
-{% swagger baseUrl="https://api.myapi.com/v1" method="post" path="/pet" summary="Create pet." %}
+{% swagger baseUrl="" method="post" path="/account/contact" summary="Add a contact information." %}
 {% swagger-description %}
 Creates a new pet.
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="name" required="true" type="string" %}
-The name of the pet
+{% swagger-parameter in="body" name="value" required="true" type="string" %}
+The value of the contact information
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="owner_id" required="false" type="string" %}
-The 
-
-`id`
-
- of the user who owns the pet
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="species" required="false" type="string" %}
-The species of the pet
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="breed" required="false" type="string" %}
-The breed of the pet
+{% swagger-parameter in="body" name="scope" required="false" type="string" %}
+The scope of this command.
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Pet successfully created" %}
